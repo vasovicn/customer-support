@@ -15,7 +15,7 @@ class ArchivedTickets(SimpleListFilter):
 
     def lookups(self,request, model_admin):
        return (
-           ('archived', 'archived'),
+           ('archived', 'Archived'),
        )
     def queryset(self, request, queryset):
         '''lookup archived will show objects where archived field is True
