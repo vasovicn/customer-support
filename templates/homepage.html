@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %} ">
+
+        <title>PC Service</title>
+</head>
+
+<body>
+    <header>
+        <h1>PC SERVICE</h1>
+    </header>
+
+
+
+    <div class="buttons">
+            {% if user.is_authenticated %}
+            <a  style=" color:green;">Logged in as {{user.username}}.</a> <br><button  onclick="location.href='logout'" type="button">logout</button><br>
+            {% else %}
+            <br><button  onclick="location.href='login'" type="button">login</button><br>
+            <br><a title="Create account" style="text-decoration:none;" href="register">Register</a>
+            {% endif %}
+            <br><a title="Create ticket" style="text-decoration:none;" href="support">Customer Support</a>
+    </div>
+
+    <div class="messages">
+        {% for message in messages %}
+        {%if use.is_authenticated %}
+        <a  style="color:green;">{{message}}</a>
+        {% else %}
+        <a  style="color:green;">{{message}}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div id="home">
+        We are PC Service and we can help you with anything.<br>
+        We can come to your home to fix your PC or you can<br>
+        bring your PC to our office(Dragana Rakica 53).<br>
+        <br>
+        Our Call Center is available from 09:00 - 17:00.<br>
+        If you have any issue you can contact our<br>
+        <a title="Create ticket" style="text-decoration:none;" href="support">Customer Support Service</a> and tell us about your issue<br>
+        We will contact you as soon as possible, if you didn't<br>
+        provide us callback time.
+
+    </div>
+
+
+
+    <div id="footer">
+        <footer>
+            <p>Thank you for visiting</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+

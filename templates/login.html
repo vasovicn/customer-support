@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h5      {
+                color:black;
+                }
+        #login  {
+                left      : 50%;
+                top       : 50%;
+                position  : absolute;
+                transform : translate(-50%, -50%);
+                width: 300px;
+                padding: 10px;
+                border: 3px solid black;
+                text-align: center;
+                background-color:#D5FCBE;
+                }
+    </style>
+
+    <title>Login</title>
+</head>
+
+<body>
+<a href="/" style="text-decoration:none; font-family: 'Lucida Handwriting';font-size: 25px; color: rgb(36, 242, 84);}">PC SERVICE</a>
+
+<form id="login" action="login" method="POST">
+    {% csrf_token %}
+    <h2>LOGIN TO YOUR ACCOUNT</h2>
+    {% for message in messages %}
+    <h5>
+    {{message}}
+    </h5>
+{% endfor %}
+    <p>username:</p>
+    <input type="text" name="username"/>
+    <p>password:</p>
+    <input type="password" name="password"/><br>
+    <br>
+    <input type="submit" name="submit"/>
+
+</form>
+
+</body>
+</html>

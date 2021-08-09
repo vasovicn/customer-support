@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+
+    <title>Customer Support</title>
+</head>
+<body>
+    <a href="/" style="text-decoration:none; font-family: 'Lucida Handwriting';font-size: 25px; color: rgb(36, 242, 84);}">PC SERVICE</a>
+
+
+<form id="support" method="POST" action="support" >
+    {% csrf_token %}
+    <h2> FILL THE TICKET FORM</h2>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <div>   {% if user.is_authenticated %}
+            <p>Name:</p><input type="text" name="name" value="{{user.first_name}}" required >
+            {% else %}
+            <p>Name:</p><input type="text" name="name" placeholder="Enter Name" required >
+            {% endif %}
+            <p>Phone number:</p><input type="tel" name="number" placeholder="Enter phone number">
+            <p>Company:</p><input type="text" name="company" placeholder="Enter Company">
+            {% if user.is_authenticated %}
+            <p>Email:</p><input type="email" name="email" value="{{user.email}}" required>
+            {% else %}
+            <p>Email:</p><input type="email" name="email" placeholder="Enter email" required>
+            {% endif %}
+            <p>Subject:</p><input type="text" name="subject" placeholder="Enter Subject" required>
+            <p>Problem description:</p><textarea  name="problem" rows="4" cols="30" placeholder="Enter problem description" required></textarea>
+            <p>Date and time for callback:</p><input type="datetime-local" name="datetime" step="1800" ><br>
+            <small>Weekdays 08:00-20:00h, Saturday 08:00-13:00h </small>
+            <br>
+            <input type="submit" name="SUBMIT"/>
+    </div>
+</form>
+
+</body>
+</html>

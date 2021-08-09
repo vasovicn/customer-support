@@ -1,0 +1,125 @@
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+	background-color: #666;
+	padding: 17px;
+	text-align: center;
+	font-family: "Lucida Handwriting";
+	font-size: 25px;
+	color: rgb(36, 242, 84);
+}
+
+h2 {
+	align: center;
+	border: 2px solid rgb(36, 242, 84);
+}
+
+article {
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	background-color: #f1f1f1;
+	padding: 10px;
+}
+
+#home {
+	left: 50%;
+	top: 58%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	width: 40%;
+	height: 60%;
+	padding: 10px;
+	border: 3px solid #666;
+	text-align: center;
+	background-color: #D5FCBE;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	right: 0;
+	background-color: #666;
+	padding: 5px;
+	text-align: center;
+	font-size: 25px;
+	color: rgb(36, 242, 84);
+}
+
+.buttons {
+	text-align: right;
+	top: 170px;
+	position: absolute;
+	right: 0px;
+	width: 300px;
+	padding: 10px;
+}
+
+.messages {
+	text-align: right;
+	top: 300px;
+	position: absolute;
+	right: 0px;
+	width: 400px;
+	padding: 10px;
+}
+
+h5 {
+	color: red;
+}
+
+#support {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	padding: 3px;
+	border: 3px solid black;
+	text-align: center;
+	background-color: #D5FCBE;
+}
+
+h5 {
+	color: red;
+}
+
+#register {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	padding: 10px;
+	border: 3px solid black;
+	text-align: center;
+	background-color: #D5FCBE;
+}
+
+h5 {
+	color: black;
+}
+
+#login {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	padding: 10px;
+	border: 3px solid black;
+	text-align: center;
+	background-color: #D5FCBE;
+}

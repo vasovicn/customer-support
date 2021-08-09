@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+
+    <title>Registration</title>
+</head>
+<body>
+    <a href="/" style="text-decoration:none; font-family: 'Lucida Handwriting';font-size: 25px; color: rgb(36, 242, 84);}">PC SERVICE</a>
+
+
+    <form id="register" method="POST" action="register">
+        {% csrf_token %}
+        <h2> CREATE YOUR ACCOUNT</h2>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+        <p>Name:</p>
+        <input type="text" name="name" placeholder="Enter name"/>
+        <p>Username:</p>
+        <input type="text" name="username" placeholder="Enter username"/>
+        <p>Email:</p>
+        <input type="email" name="email" placeholder="Enter email"/>
+        <p>Password:</p>
+        <input type="password" name="password" placeholder="Enter password"/>
+        <p>Repeat password:</p>
+        <input type="password" name="password2" placeholder="Repeat password"/><br>
+        <br>
+        <input type="submit"/>
+    </form>
+
+</body>
+</html>
